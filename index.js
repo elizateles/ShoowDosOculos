@@ -1,3 +1,25 @@
+
+
+let count = 1;
+document.getElementById("radio1").checked = true;
+
+setInterval( function(){
+    nextImage();
+   
+}, 2000)
+
+
+function nextImage(){
+    count++;
+    if(count>8){
+        count = 1;
+
+    }
+
+    document.getElementById("radio"+count).checked = true;
+}
+
+
 /*
 OBEJETIVO- QUANDO CLICAR NO BOTÃO TEMOS QUE MOSTRAR A IMAGEM DE FUNDO CORRESPONDENTE
 
@@ -29,11 +51,5 @@ botoesCarrossel.forEach((botao, indice) => {
     })
 })
 
-const menu = document.querySelector('.menu');
-const NavMenu = document.querySelector('.nav-menu');
 
-menu.addEventListener('click', () => {
-    menu.classList.toggle('ativo');
-    NavMenu.classList.toggle('ativo');
-})
 
